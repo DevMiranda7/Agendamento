@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	height: 100vh;
+	font-family: "Poppins", serif;
+  	font-weight: 400;
+  	font-style: normal;
+}
+
+
+header{
+	display: flex;
+	justify-content: center;
+	height: 100px;
+	align-items: center;
+}
+
+main{
+	display: flex;
+	justify-content: center;
+	height: 50%;
+	background-color: black;
+	align-items: center;
+}
+
+.display{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80%;
+	width: 30%;
+	border-radius: 50px;
+	background-color: white;
+	text-align: center;
+	flex-direction: column;
+	gap: 60px;
+}
+
+.botaoDAcessar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 35px;
+	background-color: black;
+	width: 100px;
+	border-radius: 50px;
+}
+
+a{
+	text-decoration: none
+}
+
