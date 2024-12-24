@@ -132,6 +132,47 @@ public class DAO {
 		}
 	}
 	
+	public void updateCliente(Clientes clienteUp) {
+		
+		String update = "update clientes set nomeCliente = ? ,dataMarcada = ?,horario = ?,valor = ? where id_cliente = ? ";
+		
+		try {
+			Connection conn = conexao();
+			
+			PreparedStatement querySQL = conn.prepareStatement(update);
+			
+			querySQL.setString(1, clienteUp.getNome());
+			querySQL.setString(2, clienteUp.getDataMarcada());
+			querySQL.setString(3, clienteUp.getHorario());
+			querySQL.setString(4, clienteUp.getValor());
+			querySQL.setString(5, clienteUp.getId_cliente());
+			
+			querySQL.executeUpdate();
+			
+		}catch(SQLException e) {
+			System.out.println("Erro ao executar a query update");
+		}
+		
+	}
+	
+	public void deleteCliente(Clientes clienteDel) {
+		
+		String remove = "delete from clientes where id_cliente = ?";
+		
+		try {
+			Connection conn = conexao();
+			
+			PreparedStatement querySQL = conn.prepareStatement(remove);
+			
+			querySQL.setString(1,clienteDel.getId_cliente());
+			
+			querySQL.executeUpdate();
+			
+			
+		}catch(SQLException e) {
+			System.out.println("Erro ao executar a query" +e);
+		}
+	}
 }
 	
 
